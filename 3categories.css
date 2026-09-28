@@ -1,0 +1,753 @@
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:#133106;
+    color:#133106;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 100px;
+    background: #e5f7d1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+
+.logo img {
+    width: 125px;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.navbar nav a {
+    color: #133106;
+    text-decoration: none;
+    font-size: 18px;
+    /* font-weight: 600; */
+    position: relative;
+}
+
+.navbar nav a.active {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -13px;
+    height: 2px;
+    background: #d8c700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-right a{
+    color: #133106;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-right button {
+    background: transparent;
+    color: #133106;
+    border: 1px solid #133106;
+    border-radius: 22px;
+    padding: 5px 25px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    background: linear-gradient(
+        180deg,
+        #e5f7d1,
+        #f0d714
+    );
+height: 90vh;
+    padding: 0px 100px;
+}
+
+
+.hero-content {
+    min-height: 445px;
+height: 90%;
+    padding: 30px 35px;
+
+    background: #133106;
+
+    border-radius: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.hero-text {
+    width: 48%;
+    padding-left: 10px;
+    color: #bdf795;
+}
+
+
+.small-title {
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-text h1 {
+
+    font-size: 60px;
+    line-height: 1.08;
+    font-weight: 400;
+
+    color: #bdf795;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-description {
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+}
+
+
+/* Green button */
+
+.green-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 18px;
+
+    background: #bdf795;
+    color: #133106;
+
+    border-radius: 6px;
+/* margin-bottom: 10px; */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+i{
+    font-size: 22px;
+    height: 24px;
+}
+
+
+/* Hero image */
+
+.hero-image {
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories-section {
+    background:#133106;
+height: 90vh;
+    padding: 60px 100px;
+}
+
+.categories-section > h2 {
+    text-align: center;
+
+
+    font-size: 47px;
+    font-weight: 400;
+
+    color: #bdf795;
+
+    margin-bottom: 25px;
+}
+
+
+/* Yellow container */
+
+.category-wrapper {
+    position: relative;
+    width: 100%;
+    /* min-height: 330px; */
+    height: 80%;
+    /* background: #080808; */
+    background-image:url(./assets/Subtract.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 28px;
+    padding: 40px 75px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Cards */
+
+.category-cards {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 100px;
+    gap: 20px;
+    padding: 0px 40px;
+}
+
+
+.category-card {
+    /* min-height: 180px; */
+    width: 100%;
+    height: 80%;
+    background:#133106;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+flex-direction: column;
+justify-content: space-evenly;
+    padding: 0 12px 20px;
+
+    color: #ffffff;
+}
+
+
+/* Round image */
+
+.category-image {
+    width: 58%;
+    height: 50%;
+
+    margin: -90px auto 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    /* border: 4px solid #0b3304; */
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.category-card h3 {
+    color: #bdf795;
+    font-size: 22px;
+   line-height: 1;
+    /* margin-bottom: 12px; */
+}
+
+
+.category-card p {
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #ffffff;
+}
+
+
+/* Arrows */
+
+.arrow {
+    position: absolute;
+/* top: 40%; */
+    width: 70px;
+    height: 70px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f0d20e;
+
+    color:#133106;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    z-index: 2;
+}
+
+.left-arrow {
+    left: -28px;
+}
+
+.right-arrow {
+    right: -28px;
+}
+
+
+/* =========================
+   SHOP BY SEASON
+========================= */
+
+.season-section {
+    padding: 0px 100px;
+    background:
+        linear-gradient(
+            to bottom,
+            #133106 0%,
+            
+            #BCF79E 100%
+        );
+        height: 80vh;
+}
+
+
+.season-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+
+.season-heading h2 {
+   
+
+    font-size: 60px;
+    font-weight: 400;
+
+    color: #bdf795;
+}
+
+
+.season-heading p {
+    margin-top: 10px;
+
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+
+/* View all */
+
+.view-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 11px 25px;
+
+    background: #bdf795;
+
+    color: #133106;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+}
+
+
+/* Season cards */
+
+.season-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    height: 60%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+
+.season-card {
+    background: #bdf795;
+    height: 100%;
+    width: 100%;
+    color: #133106;
+    overflow: hidden;
+}
+
+
+.season-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.season-content {
+    padding: 14px 25px 45px;
+}
+
+
+.season-content h3 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+.season-content p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   NATURE BANNER
+========================= */
+
+.nature-banner {
+    background-image: url(./assets/f14.png);
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 270px;
+    height: 60vh;
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background: linear-gradient(
+        to bottom,
+        #bdf795,
+        #7ebf65,
+        #0b3304
+    ); */
+}
+
+
+.banner-content {
+    text-align: center;
+
+    color: #133106;
+    z-index: 2;
+}
+
+
+.banner-content h2 {
+    
+    font-size: 60px;
+    line-height: 1.20;
+
+    font-weight: 600;
+
+    margin-bottom: 19px;
+}
+
+
+.banner-content p {
+    font-size: 18px;
+color: #fff;
+    margin-bottom: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #133106;
+    color: #c9f19f;
+    padding: 55px 6% 25px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr 0.9fr;
+    gap: 35px;
+    padding-bottom: 55px;
+}
+
+.footer-brand h2 {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 10px;
+}
+
+.footer-column h3,
+.footer-contact h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.footer-icon{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+
+.footer-column a {
+    color: #c9f19f;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-contact {
+    border-left: 1px solid #74965e;
+    padding-left: 70px;
+}
+
+.footer-contact p {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.footer-contact i {
+    font-size: 18px;
+    margin: 7px 7px 0px 0px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #74965e;
+    padding-top: 18px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .category-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 12px;
+    }
+
+    .category-wrapper {
+        padding: 60px 60px;
+    }
+
+    .season-heading h2 {
+        font-size: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px 5%;
+
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .nav-right {
+        margin-left: auto;
+    }
+
+
+    .hero-content {
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+
+    .category-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .season-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .season-heading {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .shop-btn {
+        display: none;
+    }
+
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+
+    .category-wrapper {
+        padding: 55px 25px;
+    }
+
+    .category-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .arrow {
+        width: 45px;
+        height: 45px;
+    }
+
+    .left-arrow {
+        left: -15px;
+    }
+
+    .right-arrow {
+        right: -15px;
+    }
+
+
+    .season-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contact {
+        border-left: none;
+        border-top: 1px solid #bdf795;
+
+        padding-left: 0;
+        padding-top: 25px;
+    }
+
+}
